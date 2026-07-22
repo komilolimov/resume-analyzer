@@ -55,7 +55,7 @@ export default function AnalyzePage() {
     setResult(null);
 
     try {
-      const response = await fetch('http://localhost:8001/api/analyze', {
+      const response = await fetch('/api/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

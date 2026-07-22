@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
-from schemas import AnalyzeRequest, AnalyzeResponse
+from api.schemas import AnalyzeRequest, AnalyzeResponse
 
 load_dotenv()
 
