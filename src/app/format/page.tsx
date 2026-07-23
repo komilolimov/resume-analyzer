@@ -43,16 +43,16 @@ export default function FormatPage() {
       const html2pdf = (await import('html2pdf.js')).default;
       const element = document.getElementById('resume-preview');
       
-      const opt = {
+      const opt: any = {
         margin:       0,
         filename:     `${result.job_title.replace(/[^a-zA-Z0-9]/g, '_')}_Resume.pdf`,
-        image:        { type: 'jpeg', quality: 0.98 },
+        image:        { type: 'jpeg' as const, quality: 0.98 },
         html2canvas:  { scale: 2, useCORS: true },
         jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
         pagebreak:    { mode: ['css', 'legacy'] }
       };
       
-      await html2pdf().set(opt).from(element).save();
+      await html2pdf().set(opt).from(element as HTMLElement).save();
     } catch (err) {
       console.error("Failed to generate PDF", err);
     } finally {
