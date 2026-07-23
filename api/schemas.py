@@ -16,4 +16,15 @@ class AnalyzeResponse(BaseModel):
     missing_skills: List[str] = Field(default_factory=list)
     actionable_advice: List[str] = Field(default_factory=list)
     summary: str = Field(default="", description="Краткое резюме по соответствию кандидата (2 предложения)")
-    tailored_resume_html: str = Field(default="", description="Переписанное резюме в формате чистого HTML для вставки в Word")
+    tailored_resume_html: str = Field(default="", description="Clean, ATS-optimized HTML string of the rewritten resume following Jake's Resume layout format.")
+
+class FormatRequest(BaseModel):
+    resume_text: str = Field(..., min_length=50, description="Полный текст резюме")
+    language: str = Field(default="en", description="Target language code: en, it, de, ru, uz")
+
+class FormatResponse(BaseModel):
+    is_valid_input: bool = Field(..., description="True, если текст похож на резюме.")
+    validation_error: Optional[str] = Field(None, description="Сообщение об ошибке, если текст не похож на резюме.")
+    job_title: str = Field(default="Formatted_Resume", description="Основная профессия или должность кандидата для имени файла.")
+    summary: str = Field(default="", description="Краткое саммари профиля кандидата (2-3 предложения)")
+    tailored_resume_html: str = Field(default="", description="Clean, ATS-optimized HTML string of the rewritten resume following Jake's Resume layout format.")

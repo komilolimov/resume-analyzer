@@ -67,15 +67,26 @@ export default function LandingPage() {
           {t.heroSubtitle}
         </p>
 
-        <div className="pt-4 pb-12">
+        <div className="pt-4 pb-12 flex flex-col sm:flex-row items-center justify-center gap-6">
           <button 
-            onClick={handleStart}
-            className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all bg-slate-900 rounded-full border border-slate-700/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] overflow-hidden"
+            onClick={() => { localStorage.setItem('hasSeenIntro', 'true'); router.push('/analyze'); }}
+            className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all bg-slate-900 rounded-full border border-slate-700/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] overflow-hidden w-full sm:w-auto"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative flex items-center gap-2">
-              <span>{t.getStartedBtn}</span>
+              <span>Match & Tailor</span>
               <ArrowRight className="w-5 h-5 text-slate-400 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </button>
+          
+          <button 
+            onClick={() => { localStorage.setItem('hasSeenIntro', 'true'); router.push('/format'); }}
+            className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all bg-slate-900 rounded-full border border-slate-700/80 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] overflow-hidden w-full sm:w-auto"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-orange-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="relative flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-purple-400 group-hover:rotate-12 transition-transform" />
+              <span>Auto-Format Only</span>
             </div>
           </button>
         </div>

@@ -31,6 +31,10 @@ export const translations: Record<Language, any> = {
     maangModalBadge: "Ready to paste into Microsoft Word / Google Docs",
     copyToWordBtn: "Copy for Word",
     copiedBtn: "Copied! Paste in Word (Ctrl+V)",
+    tabMatch: "Match & Tailor",
+    tabFormat: "Auto-Format",
+    formatBtn: "Format Resume",
+    formattingBtn: "Formatting with Gemini...",
   },
   ru: {
     heroTitle: "Анализатор Резюме",
@@ -61,6 +65,10 @@ export const translations: Record<Language, any> = {
     maangModalBadge: "Готово к вставке в Microsoft Word / Google Docs",
     copyToWordBtn: "Скопировать для Word",
     copiedBtn: "Скопировано! Вставьте в Word (Ctrl+V)",
+    tabMatch: "Анализ и Адаптация",
+    tabFormat: "Авто-Форматирование",
+    formatBtn: "Форматировать резюме",
+    formattingBtn: "Форматирование через Gemini...",
   },
   it: {
     heroTitle: "Analizzatore Job Fit",
@@ -91,6 +99,10 @@ export const translations: Record<Language, any> = {
     maangModalBadge: "Pronto per essere incollato su Microsoft Word / Google Docs",
     copyToWordBtn: "Copia per Word",
     copiedBtn: "Copiato! Incolla su Word (Ctrl+V)",
+    tabMatch: "Analizza e Adatta",
+    tabFormat: "Auto-Formattazione",
+    formatBtn: "Formatta CV",
+    formattingBtn: "Formattazione con Gemini...",
   },
   de: {
     heroTitle: "Job Fit Analysator",
@@ -121,6 +133,10 @@ export const translations: Record<Language, any> = {
     maangModalBadge: "Bereit zum Einfügen in Microsoft Word / Google Docs",
     copyToWordBtn: "Für Word kopieren",
     copiedBtn: "Kopiert! In Word einfügen (Strg+V)",
+    tabMatch: "Analysieren & Anpassen",
+    tabFormat: "Auto-Formatieren",
+    formatBtn: "Lebenslauf formatieren",
+    formattingBtn: "Formatieren mit Gemini...",
   },
   uz: {
     heroTitle: "Rezyume Analizatori",
@@ -151,5 +167,9 @@ export const translations: Record<Language, any> = {
     maangModalBadge: "Microsoft Word / Google Docs-ga joylashtirishga tayyor",
     copyToWordBtn: "Word uchun nusxalash",
     copiedBtn: "Nusxalandi! Word-ga joylashtiring (Ctrl+V)",
+    tabMatch: "Moslashtirish",
+    tabFormat: "Avto-Formatlash",
+    formatBtn: "Rezyumeni Formatlash",
+    formattingBtn: "Gemini bilan formatlanmoqda...",
   }
 };

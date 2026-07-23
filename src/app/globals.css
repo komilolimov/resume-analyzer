@@ -50,3 +50,10 @@ body {
   scrollbar-width: thin;
   scrollbar-color: rgba(71, 85, 105, 0.4) transparent;
 }
+
+/* Отключение дефолтных колонтитулов браузера (Title и URL) при печати */
+@media print {
+  @page {
+    margin: 0;
+  }
+}
